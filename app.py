@@ -12,12 +12,12 @@ app = Flask(__name__)
 """ Creating a new route and page called index. """
 @app.route('/')
 def index():
-    return 'Hello world'
+    return render_template('index.html')
 
 """ Creating a new route and page called cakes. """
 @app.route('/cakes')
 def cakes():
-    return 'Yummy cakes!'
+     return render_template('cakes.html')
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
